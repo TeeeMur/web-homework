@@ -1,11 +1,19 @@
 a {
     text-decoration: none;
+    transition: scale 0.1s;
+    -webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
     cursor: pointer;
-    color: blue;
+}
+
+a:active {
+    scale: 0.9;
 }
 
 main > .container-fluid {
@@ -39,6 +47,9 @@ button:active {
     margin-left: 12px;
     padding: 2px;
     color: #212529;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: border 0.15s, background-color 0.15s, color 0.15s, padding 0.15s, scale 0.1s;
 }
 
@@ -173,6 +184,8 @@ button:active {
     font-size: 20px;
     margin: 4px;
     color: green;
+    padding: 2px 4px 2px;
+    background-color: #F0F0F0;
 }
 
 .tag-container {
@@ -241,7 +254,7 @@ ul {
     color: white;
     width: 100px;
     height: 40px;
-    transition: color 0.15s, background-color 0.15s;
+    transition: color 0.15s, background-color 0.15s, scale 0.1s;
 }
 
 .question-ask-button:hover {
@@ -254,9 +267,9 @@ ul {
 }
 
 .pages {
-    width: 240px;
+    width: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .pages-container {
@@ -265,13 +278,17 @@ ul {
 }
 
 .page-counter {
-    width: 30px;
+    min-width: 30px;
+    width: auto;
     height: 30px;
+    padding: 0 4px;
     border: 2px solid;
     border-radius: 4px;
     background-color: white;
+    color: black;
     display: flex;
     justify-content: center;
+    margin-left: 5px;
 }
 
 .page-counter-sign {
@@ -461,6 +478,9 @@ ul {
 }
 
 .sign-up-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 2px solid #46a146;
     border-radius: 10px;
     background-color: #46a146;
